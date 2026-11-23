@@ -4,6 +4,9 @@ Zero-config, local-first background job queue and concurrent worker pool written
 
 Part of the **\*Pulse** developer tooling series (`devpulse`, `pocketpulse`, `queuepulse`).
 
+- **Live Interactive Demo (Vercel):** [https://queuepulse-ashy.vercel.app](https://queuepulse-ashy.vercel.app) *(runs the client-side Browser Sandbox Worker Engine with `localStorage` persistence)*
+- **Native Go + SQLite Engine:** Run locally via `make run` or `docker compose up` for native SQLite WAL durability, SSE streaming, `ffprobe` media inspection, and server-side HTTP webhooks.
+
 ## Why QueuePulse?
 
 Heavy background tasks (video transcoding, PDF generation, flaky webhook deliveries, local media inspection) should not block HTTP handlers or saturate a laptop's CPU cores all at once. QueuePulse gives you a durable job queue with bounded concurrency and live observability in a **single binary** with zero Redis or external broker setup.

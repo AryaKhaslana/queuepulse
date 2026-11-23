@@ -1,0 +1,13 @@
+Dockerfile
+docker-compose.yml
+Makefile
+go.mod
+go.sum
+cmd/
+internal/
+webembed/
+bin/
+*.db
+*.db-shm
+*.db-wal
+.taste-skill/
