@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+:root {
+  /* Framed sheet light tokens with low-chroma slate-blue observability frame tint */
+  --ground: #f1f5f8;
+  --surface: #ffffff;
+  --raised: #f5f7f9;
+  --active: #e7edf2;
+  --border: #e4e8ec;
+  --rule: #eef1f4;
+  --control: #c7cdd3;
+  --text: #131416;
+  --muted: #53585f;
+  --accent: #1b6c80;
+  --accent-fg: #ffffff;
+  --accent-soft: #e6f2f5;
+  --positive: #1e7b4f;
+  --negative: #c4242a;
+  --warning: #92400e;
+  --chart-1: #1b6c80;
+  --chart-2: #2f70bb;
+  --chart-3: #a86f0c;
+  --pill-positive-bg: #dcfae5;
+  --pill-positive-ink: #04250e;
+  --pill-negative-bg: #ffedea;
+  --pill-negative-ink: #831c1e;
+  --pill-warning-bg: #fffbeb;
+  --pill-warning-ink: #92400e;
+  --pill-neutral-bg: #e9edf1;
+  --pill-neutral-ink: #2f343a;
+  --pill-accent-bg: #e1f1f5;
+  --pill-accent-ink: #0f4b5a;
+
+  --radius-card: 8px;
+  --radius-control: 6px;
+  --radius-sheet: 16px;
+}
+
+.dark {
+  --ground: #0c1015;
+  --surface: #131920;
+  --raised: #1a212b;
+  --active: #222c3a;
+  --border: #242e3c;
+  --rule: #1c2430;
+  --control: #3a4657;
+  --text: #edf1f5;
+  --muted: #98a3b1;
+  --accent: #4ab3ca;
+  --accent-fg: #07191f;
+  --accent-soft: #14323b;
+  --positive: #43b57f;
+  --negative: #f06a6f;
+  --warning: #e5a93c;
+  --chart-1: #4ab3ca;
+  --chart-2: #6ca0df;
+  --chart-3: #d99f38;
+  --pill-positive-bg: #113022;
+  --pill-positive-ink: #89e5b7;
+  --pill-negative-bg: #361719;
+  --pill-negative-ink: #fca5a8;
+  --pill-warning-bg: #33260e;
+  --pill-warning-ink: #f7cf79;
+  --pill-neutral-bg: #1f2732;
+  --pill-neutral-ink: #cfd7e2;
+  --pill-accent-bg: #12313a;
+  --pill-accent-ink: #8ce0f0;
+}
+
+* {
+  box-sizing: border-box;
+  border-color: var(--border);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--ground);
+  color: var(--text);
+  font-family: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+.font-mono {
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Visible accessible focus rings across all interactive controls */
+:where(button, a, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Subtle custom scrollbars inside drawers and tables */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--control);
+  border-radius: 3px;
+}

@@ -1,0 +1,14 @@
+services:
+  queuepulse:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - queuepulse-data:/data
+    environment:
+      QUEUEPULSE_ADDR: ":8080"
+      QUEUEPULSE_DB: "/data/queuepulse.db"
+    restart: unless-stopped
+
+volumes:
+  queuepulse-data:

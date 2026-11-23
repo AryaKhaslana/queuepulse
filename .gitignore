@@ -1,0 +1,26 @@
+# Go binaries & local databases
+/queuepulse
+/queuepulse.db
+/queuepulse.db-shm
+/queuepulse.db-wal
+*.db
+*.db-shm
+*.db-wal
+/bin/
+
+# Frontend build & deps
+web/node_modules/
+web/dist/
+web/.vite/
+
+# Embedded build copy (generated during make build; keep placeholder tracked)
+webembed/dist/*
+!webembed/dist/index.html
+
+# Local tool caches & secrets
+.taste-skill/
+.vercel/
+.env
+.env.local
+*.log
+.DS_Store
